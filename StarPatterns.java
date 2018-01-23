@@ -74,7 +74,33 @@ class StarPatterns
     }
     
     public static void starBox(int h) {
+        int w = h;
         
+        for (int i=0; i<h; i++)
+        {
+            for (int j=0; j<w; j++)
+            {               
+                if (i==0 || i==h-1 || j==0 || j==w-1 || (i==j || i+j==h-1)) System.out.print("*");
+                else System.out.print(" ");
+
+            }
+            System.out.println();
+        }   
+    }
+    
+    public static void twoStarBoxes(int h) {
+        int w = h;
+        
+        for (int i=0; i<h; i++)
+        {
+            for (int j=0; j<w; j++)
+            {             
+                if ((i < (h / 2) + 1 && j < (w / 2) + 1) || (i  > (h / 2)) && (j + 1 > (w / 2))) System.out.print("*"); // idk
+                else System.out.print(" ");
+
+            }
+            System.out.println();
+        }   
     }
     
     public static void main(String[] args) 
@@ -92,6 +118,9 @@ class StarPatterns
         System.out.println();
         
         starBox(7);
+        System.out.println();
+        
+        twoStarBoxes(7);
         System.out.println();
             
     }
