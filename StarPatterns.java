@@ -146,6 +146,26 @@ class StarPatterns
         
     }
     
+    public static void checkerBoard(int h, int w) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if ((i % 2 != 0 && j % 2 != 0) || (i % 2 == 0 && j % 2 == 0)) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void biggerCheckerBoard(int w, int h, int size) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if ((i/size % 2 != 0 && j/size % 2 != 0) || (i/size % 2 == 0 && j/size % 2 == 0)) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
     public static void main(String[] args) 
     {
         starGrid(8, 8);
@@ -178,6 +198,11 @@ class StarPatterns
         isoscelesStarTriangle(8, 8);
         System.out.println();
             
+        checkerBoard(8, 8);
+        System.out.println();
+        
+        biggerCheckerBoard(30, 20, 5);
+        System.out.println();
     }
      
 }
