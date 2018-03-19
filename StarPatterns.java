@@ -133,6 +133,19 @@ class StarPatterns
         }
     }
     
+    public static void isoscelesStarTriangle(int h, int w) {
+        w = 2 * w - 1;
+        
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if (Math.abs(j - (w / 2)) < i) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+        
+    }
+    
     public static void main(String[] args) 
     {
         starGrid(8, 8);
@@ -160,6 +173,9 @@ class StarPatterns
         System.out.println();
         
         starTriangleUR(8, 8);
+        System.out.println();
+        
+        isoscelesStarTriangle(8, 8);
         System.out.println();
             
     }
