@@ -158,6 +158,9 @@ class StarPatterns
         
         emptyTriangle(8, 8);
         System.out.println();
+        
+        starTriangleUR(8, 8);
+        System.out.println();
             
     }
      
