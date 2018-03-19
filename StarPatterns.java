@@ -115,6 +115,21 @@ class StarPatterns
     public static void emptyTriangle(int h, int w) {
     
         for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if (i == j || i == h - 1 || j == 0) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void starTriangleUR(int h, int w) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if (j >= i) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
         }
     }
     
@@ -139,6 +154,10 @@ class StarPatterns
         System.out.println();
         
         starTriangle(8, 8);
+        System.out.println();
+        
+        emptyTriangle(8, 8);
+        System.out.println();
             
     }
      
