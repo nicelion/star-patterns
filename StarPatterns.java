@@ -88,40 +88,57 @@ class StarPatterns
         }   
     }
     
-    public static void twoStarBoxes(int h) {
-        int w = h;
+    public static void twoStarBoxes(int h, int w) {
+        int hH = h/2;
+        int wH = h/2;
         
-        for (int i=0; i<h; i++)
-        {
-            for (int j=0; j<w; j++)
-            {             
-                if ((i < (h / 2) + 1 && j < (w / 2) + 1) || (i  > (h / 2)) && (j + 1 > (w / 2))) System.out.print("*"); // idk
+        for (int i=0; i<h; i++) {
+            for (int j=0; j<w; j++) {               
+                if((i<hH && j<wH)||(i>=hH && j>=wH))System.out.print("*");
                 else System.out.print(" ");
-
             }
             System.out.println();
-        }   
+        }      
+    }
+    
+    public static void starTriangle(int h, int w) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                if (i >= j) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+    public static void emptyTriangle(int h, int w) {
+    
+        for (int i = 0; i < h; i++) {
+        }
     }
     
     public static void main(String[] args) 
     {
-        starGrid(5, 5);
+        starGrid(8, 8);
         System.out.println();
 
-        starBox(7, 9);
+        starBox(8, 8);
         System.out.println();
         
-        starX(7);
+        starX(8);
         System.out.println();
         
-        starZ(7);
+        starZ(8);
         System.out.println();
         
-        starBox(7);
+        starBox(8);
         System.out.println();
         
-        twoStarBoxes(7);
+        twoStarBoxes(8, 8);
         System.out.println();
+        
+        starTriangle(8, 8);
             
     }
      
